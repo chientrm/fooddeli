@@ -28,8 +28,11 @@ class CustomAppBar extends StatelessWidget {
 
   Widget _buildIcon(IconData icon) {
     return Container(
-      padding: EdgeInsets.all(8),
-      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+      padding: const EdgeInsets.all(8),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white,
+      ),
       child: Icon(icon),
     );
   }

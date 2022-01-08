@@ -7,7 +7,7 @@ class FoodQuantity extends StatelessWidget {
   FoodQuantity(this.food);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.maxFinite,
       height: 40,
       child: Stack(
