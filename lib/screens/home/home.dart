@@ -35,13 +35,19 @@ class HomePageState extends State<HomePage> {
             pageController.jumpToPage(index);
           }, restaurant),
           Expanded(
-              child: FoodListView(selected, (int index) {
-            setState(() {
-              selected = index;
-            });
-          }, pageController, restaurant)),
+            child: FoodListView(
+              selected,
+              (int index) {
+                setState(() {
+                  selected = index;
+                });
+              },
+              pageController,
+              restaurant,
+            ),
+          ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             height: 60,
             child: SmoothPageIndicator(
               controller: pageController,
@@ -57,8 +63,11 @@ class HomePageState extends State<HomePage> {
                   height: 10,
                   color: kBackground,
                   borderRadius: BorderRadius.circular(10),
-                  dotBorder:
-                      DotBorder(color: kPrimaryColor, padding: 2, width: 2),
+                  dotBorder: const DotBorder(
+                    color: kPrimaryColor,
+                    padding: 2,
+                    width: 2,
+                  ),
                 ),
               ),
               onDotClicked: (index) => pageController.jumpToPage(index),
@@ -70,7 +79,7 @@ class HomePageState extends State<HomePage> {
         onPressed: () {},
         backgroundColor: kPrimaryColor,
         elevation: 2,
-        child: Icon(
+        child: const Icon(
           Icons.shopping_bag_outlined,
           color: Colors.black,
           size: 30,

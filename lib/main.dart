@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    return MaterialApp(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food Delivery App',
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

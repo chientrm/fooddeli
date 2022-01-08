@@ -7,8 +7,8 @@ class RestaurantInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 40),
-      padding: EdgeInsets.symmetric(horizontal: 25),
+      margin: const EdgeInsets.only(top: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         children: [
           Row(
@@ -19,73 +19,77 @@ class RestaurantInfo extends StatelessWidget {
                 children: [
                   Text(
                     restaurant.name,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Container(
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              color: Colors.grey.withOpacity(0.4),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Text(
-                            restaurant.waitTime,
-                            style: TextStyle(color: Colors.white),
-                          )),
-                      SizedBox(
-                        width: 10,
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.4),
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Text(
+                          restaurant.waitTime,
+                          style: const TextStyle(color: Colors.white),
+                        ),
                       ),
+                      const SizedBox(width: 10),
                       Text(
                         restaurant.distance,
                         style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey.withOpacity(0.4)),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.withOpacity(0.4),
+                        ),
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       Text(
                         restaurant.label,
                         style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey.withOpacity(0.4)),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.withOpacity(0.4),
+                        ),
                       )
                     ],
                   )
                 ],
               ),
               ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.asset(
-                    restaurant.logoUrl,
-                    width: 80,
-                  ))
+                borderRadius: BorderRadius.circular(50),
+                child: Image.asset(
+                  restaurant.logoUrl,
+                  width: 80,
+                ),
+              )
             ],
           ),
-          SizedBox(
-            height: 5,
-          ),
+          const SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '"${restaurant.description}"',
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star_outline,
                     color: kPrimaryColor,
                   ),
                   Text(
                     '${restaurant.score}',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(width: 25),
+                  const SizedBox(width: 25),
                 ],
               )
             ],

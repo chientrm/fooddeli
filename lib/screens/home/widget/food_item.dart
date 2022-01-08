@@ -16,7 +16,7 @@ class FoodItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             width: 110,
             height: 110,
             child: Image.asset(
@@ -26,7 +26,7 @@ class FoodItem extends StatelessWidget {
           ),
           Expanded(
               child: Container(
-            padding: EdgeInsets.only(top: 20, left: 10, right: 10),
+            padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -35,15 +35,15 @@ class FoodItem extends StatelessWidget {
                     children: [
                       Text(
                         food.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           height: 1.5,
                         ),
                       ),
-                      Icon(Icons.arrow_forward_ios_outlined, size: 15)
+                      const Icon(Icons.arrow_forward_ios_outlined, size: 15)
                     ]),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   food.description,
                   style: TextStyle(
@@ -53,10 +53,10 @@ class FoodItem extends StatelessWidget {
                     height: 1.5,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       '\$',
                       style: TextStyle(
                         fontSize: 10,
@@ -65,7 +65,7 @@ class FoodItem extends StatelessWidget {
                     ),
                     Text(
                       '${food.price}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
